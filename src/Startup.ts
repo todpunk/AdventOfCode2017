@@ -22,8 +22,12 @@ class Startup {
         let inputFile = process.argv.length > 4 ? process.argv[4] : null;
         let data = "None"
         if(inputFile !== null) {
-            data = fs.readFileSync(inputFile, "utf-8");
-            console.log(data);
+            if(fs.existsSync(inputFile)){
+                data = fs.readFileSync(inputFile, "utf-8");
+            } else {
+                // It's not a file, try just using the string
+                data = inputFile;
+            }
         }
         if (dayMap[day]) {
             // This should run the appropriate day's code
