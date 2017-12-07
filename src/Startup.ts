@@ -2,17 +2,21 @@ import fs = require('fs');
 
 import { DayOne } from "./DayOne";
 import { DayTwo } from "./DayTwo";
+import { DayThree} from "./DayThree";
+import { DayFour} from "./DayFour";
 import { PuzzleDay } from "./PuzzleDay";
 
 let dayMap : {[index:number]:any} = {
     1: DayOne,
-    2: DayTwo
+    2: DayTwo,
+    3: DayThree,
+    4: DayFour
 }
 
 class Startup {
     public static main(): number {
         if (process.argv.length < 3) {
-            console.log('Usage: node aoc.js <day> <puzzle> [<puzzle input filename>]');
+            console.log('Usage: node aoc.js <day> <puzzle> [<puzzle input filename>|<puzzle input string>]');
         } else {
             console.log('Asking for day:', process.argv[2], 'puzzle', process.argv[3], 'input', process.argv.length > 3 ? process.argv[4] : 'None')
         }
