@@ -1,16 +1,18 @@
 import fs = require('fs');
 
+import { PuzzleDay } from "./PuzzleDay";
 import { DayOne } from "./DayOne";
 import { DayTwo } from "./DayTwo";
 import { DayThree} from "./DayThree";
 import { DayFour} from "./DayFour";
-import { PuzzleDay } from "./PuzzleDay";
+import { DayThirteen} from "./DayThirteen";
 
 let dayMap : {[index:number]:any} = {
     1: DayOne,
     2: DayTwo,
     3: DayThree,
-    4: DayFour
+    4: DayFour,
+    13: DayThirteen
 }
 
 class Startup {
