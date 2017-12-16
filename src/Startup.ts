@@ -6,13 +6,15 @@ import { DayTwo } from "./DayTwo";
 import { DayThree} from "./DayThree";
 import { DayFour} from "./DayFour";
 import { DayThirteen} from "./DayThirteen";
+import { DayFifteen} from "./DayFifteen";
 
 let dayMap : {[index:number]:any} = {
     1: DayOne,
     2: DayTwo,
     3: DayThree,
     4: DayFour,
-    13: DayThirteen
+    13: DayThirteen,
+    15: DayFifteen
 }
 
 class Startup {
